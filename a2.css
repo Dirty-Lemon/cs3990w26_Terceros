@@ -1,0 +1,59 @@
+/* Header formatting */
+header {
+    font-style: italic;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/* Keep image on left side */
+img {
+    text-align: left !important;
+}
+
+p {
+    /* border-style: solid; */
+    /* text-align: right; */
+}
+
+/* Link button format */
+button {
+    background-color: lightblue;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+button:active {
+    background-color: red;
+}
+
+/* General div */
+div {
+    border-style: solid;
+    margin: 10px
+}
+
+/* Aside*/
+.aside {
+    width: 200px;
+    padding: solid pink !important;
+
+    /* List specifics */
+    ol {
+        background-color: pink;
+    }
+
+    /* List element specifics */
+    li {
+        margin: 5px;
+        padding: 5px;
+        background-color: maroon;
+        color: white;
+    }
+
+}
+
+/* Aside 2 list */
+/* .aside > ol {
+} */
