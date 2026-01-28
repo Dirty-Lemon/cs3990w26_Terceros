@@ -12,9 +12,11 @@ div {
     vertical-align: bottom;
 }
 
-/* Keep image on left side */
-img {
-    /* margin: 20px; */
+/* Keep header image on left side */
+.header > img {
+    margin: 20px;
+    /* float: left; */
+    position: sticky;
 }
 
 /* Link button format */
@@ -37,9 +39,15 @@ button:active {
 } */
 
 
-/* Asides 1 & 2 */
-.left {
+/* Aside 1 */
+.aside1 {
     /* float: left; */
+    width: 20%;
+    position: sticky;
+}
+
+/* Aside 2 */
+.aside2 {
     width: 20%;
 }
 
@@ -58,7 +66,7 @@ ol > li {
 }
 
 /* Aside 3 */
-.right {
+.aside3 {
     float: right;
     width: 20%;
 }
