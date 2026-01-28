@@ -1,37 +1,41 @@
-/* General div */
+html {
+    font-family: Arial;
+}
+
+/* General div colour and margin */
 div {
     margin: 10px;
-    padding: 1px;
-    background-color: rgb(204, 220, 240);
+    background-color: lightgoldenrodyellow;
 }
 
 /* Header formatting */
-.header {
-    font-style: italic;
+.header > h3 {
     text-align: center;
     vertical-align: bottom;
+    bottom: 25px;
 }
 
 /* Keep header image on left side */
-.header > img {
-    margin: 20px;
-    /* float: left; */
-    position: sticky;
+.header-img {
+    margin: 10px;
+    position: relative;
+    left: 10px;
 }
 
 /* Link button format */
 button {
     margin: 5px;
     padding: 5px;
+    font-style: italic;
     /* background-color: lightgray; */
 }
 
 button:hover {
-    background-color: lightsalmon;
+    background-color: lightblue;
 }
 
 button:active {
-    background-color: gold;
+    background-color: lightskyblue;
 }
 
 /* button:focus {
@@ -42,26 +46,37 @@ button:active {
 /* Aside 1 */
 .aside1 {
     /* float: left; */
-    width: 20%;
+    width: 25%;
     position: sticky;
+    top: 5px;
+}
+
+/* Wrap photos */
+.aside-img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Aside 2 */
 .aside2 {
-    width: 20%;
+    width: 25%;
+    margin-bottom: 150px;   /* Prevents the bottom of the list from being covered by the footer */
 }
 
 /* List format */
 ol {
     margin: 10px;
     padding: 10px;
-    background-color: lightcyan;
+    list-style-position: inside;
 
 }
 
 ol > li {
     margin: 10px;
-    padding: 5px;
+    background-color: cyan;
+}
+
+span {
     background-color: lightgreen;
 }
 
@@ -71,37 +86,35 @@ ol > li {
     width: 20%;
 }
 
-
-/* Remove list type */
-ul {
+/* Remove bullet points from list */
+.aside3 > li {
     list-style-type: none;
-    /* border: solid; */
 }
 
 /* Checkbox colours */
-ul > li:nth-child(odd) {
+.aside3 > li:nth-child(odd) {
     background: gold;
 }
 
-ul > li:nth-child(even) {
-    background: lightgoldenrodyellow;
+.aside3 > :nth-child(even) {
+    background: burlywood;
 }
 
 /* Checkbox rule to cross out item when checked */
 input:checked + label{
     text-decoration: line-through;
-    background: lightgray;
+    background-color: lightgray;
 }
 
 /* Add red-cross after checked item */
-input:checked + label::after {
+label::after {
     content: '  \274C';
 }
 
 /* Center div */
 .middle {
     float: right;
-    /* width: 50%; */
+    width: 45%;
 }
 
 /* Sections in Main Content */
@@ -109,5 +122,49 @@ p {
     border-style: round;
     margin: 5px;
     padding: 5px;
-    background-color: lightcyan;
+    background-color: peachpuff
+}
+
+.middle > ul {
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: peachpuff;
+}
+
+/* .middle {
+
+} */
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 5px;
+    background-color: burlywood;
+    font-style: italic;
+}
+
+.footer > ul {
+    float: left;
+}
+
+/* Footer buttons on the right; colour behaviour */
+.footer img{
+    float: right;
+    right: 10px;
+    margin: 1%;
+}
+
+.footer-img {
+    right: 5px;
+    filter: grayscale(100%);
+}
+
+.footer-img:hover {
+    filter: grayscale(0%);
+}
+
+/* Footer image click effect */
+.footer-img:active {
+    filter: brightness(75%);
 }
