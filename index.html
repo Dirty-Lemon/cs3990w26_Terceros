@@ -12,9 +12,8 @@
 
     <body>
 
-        <!-- Header -->
-        <div>
-            <header>
+        <!-- Header div -->
+        <div class = "header">
                 <img
                     class = "head-img"
                     src = "me.jpg"
@@ -22,31 +21,86 @@
                 />
 
                 <h3>Kevin Terceros CV</h3>
-            </header>
 
-        </div>
-        <div>
-            <p>
-                <button>Link1</button>
-                <button>Link1</button>
-                <button>Link1</button>
-
-                Menu
-            </p>
         </div>
         
-            <div class = "aside">
-                <p>image</p>
-            </div>
+        <!-- Link Menu div -->
+        <div>
+            <button>
+                <a href = "https://www.nwpolytech.ca/program/computing-science-degree">
+                    CS Program
+                </a>
+            </button>
 
-            <div class = "aside">
-                <p>
-                    <ol type = "1">
-                        <li>Internet Technologies</li>
-                        <li>Computer Vision and Image Processing</li>
-                        <li>Data Communications and Networking</li>
-                    </ol>
-                </p>
-            </div>
+            <button>
+                <a href = "https://www.nwpolytech.ca/staff-and-faculty">
+                    Faculty & Staff
+                </a>
+            </button>
+
+            <button>
+                <a href = "https://www.nwpolytech.ca">
+                    NWP Home
+                </a>
+            </button>
+        </div>
+        
+        <!-- Aside 1 - Image -->
+        <div class = "left">
+            <img
+                    class = "head-img"
+                    src = "nwp-building.jpg"
+                    height = 250 px
+                />
+        </div>
+
+        <!-- Aside 2 - Course List -->
+        <div class = "left">
+            <ol type = "1">
+                <li>CS3990 - Internet Technologies</li>
+                <li>CS4060 - Computer Vision and Image Processing</li>
+                <li>CS2000 - Data Communications and Networking</li>
+            </ol>
+        </div>
+        
+        <!-- Aside 3 - Todo List -->
+        <div class = "right">
+            <h3>My To Do List</h3><br>
+
+            <ul>
+                <li><input type = "checkbox" name = "option1" id = "o1">
+                <label for = "o1">Item 1</label></li>
+
+                <li>
+                    <input type = "checkbox" name = "option2" id = "o2">
+                <label for = "o2">Item 2</label></li>
+
+                <li>
+                    <input type = "checkbox" name = "option3" id = "o3">
+                <label for = "o3">Item 3</label></li>
+                <li>
+                    <input type = "checkbox" name = "option4" id = "o4">
+                <label for = "o4">Item 4</label></li>
+                <li>
+                    <input type = "checkbox" name = "option5" id = "o5">
+                <label for = "o5">Item 5</label></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Middle -->
+        <div class = "middle">
+            <p>
+                Section 1
+            </p>
+            
+            <p>
+                Section 2
+            </p>
+
+        </div>
+
+        
     </body>
 </html>
