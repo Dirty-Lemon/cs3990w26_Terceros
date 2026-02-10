@@ -1,0 +1,95 @@
+/* General Rules */
+h2 {
+    color: rgb(245, 201, 147);
+    font-style: italic;
+}
+
+h3 {
+    color: rgb(66, 37, 2);
+    font-style: italic;
+}
+
+
+/* Part 1 Rules */
+article {
+    background-color: rgb(66, 37, 2);
+}
+
+/* Boxes in part 1 format */
+article > div {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(245, 201, 147);
+    color: rgb(66, 37, 2);
+}
+
+/* Part 1, Task 1 */
+article > div:hover {
+    border-color: red;
+    border-style: solid;
+}
+
+/* Dim the boxes below of the div of focus */
+div:hover ~ div {
+    filter: opacity(25%);
+}
+
+/* Dim the boxes above the box of focus*/
+div:has(~ div:is(:hover, :focus-visible)) {
+    filter: opacity(25%);
+}
+
+/* Hide speech bubble */
+.task1 > div {
+    display: none;
+}
+
+/* Show speech bubble when hovering*/
+.task1:hover > div {
+    display: block;
+    background-color: orange;
+    
+}
+
+/* Part 1, Task 2 */
+/* All list elements: maroon */
+li {
+    color: maroon;
+}
+
+/* First element: coloured block */
+li:first-child {
+    background-color: darkorange;
+}
+
+/* Third element: black */
+.special {
+    color: black !important;
+}
+
+/* Second-last element: italics */
+li:nth-last-child(2) {
+    font-style: italic;
+}
+
+/* Last element: bold */
+li:last-child {
+    font-weight: bold;
+}
+
+/* Part 2 Rules */
+article + article {
+    background-color: rgb(245, 201, 147);
+}
+
+article + article > div {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(66, 37, 2);
+    color: rgb(245, 201, 147);
+}
+
+article + article > div:hover {
+    border-color: pink;
+    border-style: dashed;
+}
