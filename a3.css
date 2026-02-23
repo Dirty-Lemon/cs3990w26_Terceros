@@ -52,8 +52,8 @@ div:has(~ div:is(:hover, :focus-visible)) {
 }
 
 /* Part 1, Task 2 */
-/* All list elements: maroon */
-li {
+/* Colour all list elements except special */
+li:not(.special) {
     color: maroon;
 }
 
@@ -63,9 +63,9 @@ li:first-child {
 }
 
 /* Third element: black */
-.special {
+/* .special {
     color: black !important;
-}
+} */
 
 /* Second-last element: italics */
 li:nth-last-child(2) {
@@ -73,15 +73,17 @@ li:nth-last-child(2) {
 }
 
 /* Last element: bold */
-li:last-child {
+li:nth-child(odd) {
     font-weight: bold;
 }
 
 /* Part 2 Rules */
+/* Background colour for part 2 */
 article + article {
     background-color: rgb(245, 201, 147);
 }
 
+/* Background for part 2 divs and text */
 article + article > div {
     margin: 5px;
     padding: 5px;
@@ -89,7 +91,45 @@ article + article > div {
     color: rgb(245, 201, 147);
 }
 
+/* Border format when hovering */
 article + article > div:hover {
     border-color: pink;
     border-style: dashed;
+
+}
+
+/* Part 2, Task 1 custom block quote */
+blockquote:before {
+    color: rgb(245, 201, 147);
+    background-color: darkorange;
+    content: open-quote;
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote:after {
+    color: rgb(245, 201, 147);
+    background-color: darkorange;
+    content: close-quote;
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -1em;
+}
+
+/* Change colour of "Custom blockquote" */
+.task1:hover {
+    h4 {
+    color: rgb(184, 59, 2)
+    }
+
+    blockquote:before {
+    background-color: rgb(184, 59, 2);
+    }
+
+    blockquote:after {
+        background-color: rgb(184, 59, 2);
+    }
 }
