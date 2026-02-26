@@ -95,7 +95,6 @@ article + article > div {
 article + article > div:hover {
     border-color: pink;
     border-style: dashed;
-
 }
 
 /* Part 2, Task 1 custom block quote */
@@ -122,14 +121,44 @@ blockquote:after {
 /* Change colour of "Custom blockquote" */
 .task1:hover {
     h4 {
-    color: rgb(184, 59, 2)
+        color: rgb(184, 59, 2);
     }
 
     blockquote:before {
-    background-color: rgb(184, 59, 2);
+        background-color: rgb(184, 59, 2);
     }
 
     blockquote:after {
         background-color: rgb(184, 59, 2);
+    }
+}
+
+/* Part 2 list */
+article + article li:nth-child(even)::before {
+    color: rgb(245, 201, 147);
+    content: '\263A';
+}
+
+/* Part 2 Right/Wrong */
+.task3 {
+    div {
+        background-color: rgb(107, 62, 6);
+        margin: 10px
+    }
+
+    
+    div:hover {
+        background-color: rgb(133, 56, 4);
+    }
+
+}
+
+.task3:hover {
+    .wrong:after{
+        content: '\274C';
+    }
+
+    .correct:after{
+        content: '\2705';
     }
 }
