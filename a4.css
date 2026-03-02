@@ -1,3 +1,25 @@
 html {
     font-family: Arial
 }
+
+button {
+    border-radius: 5px;
+    transform: skew(-15deg);
+
+    border-color: white;
+    background-color: rgb(195, 130, 238);
+    color: indigo;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    transform: skew(0deg);
+    padding: 5px;
+    background-image: linear-gradient(rgb(195, 130, 238), rebeccapurple);
+    /* background-color: rebeccapurple; */
+    color: white;
+}
+
+button:active span {
+    background-color: aqua;
+}
