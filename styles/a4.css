@@ -1,0 +1,84 @@
+html {
+    font-family: Arial
+}
+
+.header {
+    margin: 0px;
+    padding: 30px;
+    text-align: center;
+
+    background-color: indigo;
+    color: white;
+}
+
+/* Keeps the buttons beside the tabs rather than below */
+.left {
+    display: flex;
+}
+
+/* Left tab formatting */
+.tabs {
+    width: 25%;
+
+    div {
+        margin: 5px;
+        padding: 5px;
+
+        background-color: rgb(145, 120, 220);
+        color: white;
+    }
+}
+
+/* General button functions */
+button {
+    border-radius: 5px;
+    transform: skew(-15deg);
+
+    border-color: white;
+    background-color: rgb(145, 120, 220);
+    color: indigo;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    transform: skew(0deg);
+    padding: 5px;
+
+    background-image: linear-gradient(rgb(195, 130, 238), rebeccapurple);
+    color: white;
+}
+
+button:last-child:hover + .pulldown {
+    /* Test */
+    background-color: aquamarine;
+}
+
+button:active span {
+    background-color: aqua;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    /* width: 25%; */
+
+    background-color: rgb(145, 120, 220);
+    color: white;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: 100%;
+
+    font-size: small;
+    font-weight: bold;
+
+    background-color: rgb(145, 120, 220);
+    color: indigo;
+}
