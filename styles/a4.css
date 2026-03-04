@@ -19,9 +19,12 @@ body {
     border: 0px;
     padding: 15px;
     text-align: center;
-
     background-color: indigo;
-    color: white;
+
+    /* "About Canada" heading */
+    a {
+        color: white;
+    }
 }
 
 /* Keeps the buttons beside the tabs rather than below */
@@ -33,23 +36,25 @@ body {
 
 /* Left tab formatting */
 .tabs > div{
-    /* div { */
-        margin: 5px;
-        padding: 5px;
+    margin: 5px;
+    padding: 5px;
 
-        background-color: rgb(145, 120, 220);
-        color: white;
-    /* } */
+    background-color: rgb(145, 120, 220);
+    color: white;
 }
 
 /* Middle section formatting */
-.middle {
-    flex: 50%;
-    margin: 10px;
-    /* align-self: center; */
+
+@media only screen and (min-width: 600px){
+    .middle {
+        flex: 50%;
+        margin: 10px;
+        /* align-self: center; */
+    }
 }
 
-.pulldown {
+/* Hide My Alberta dropdown */
+.dropdown {
     display: none;
 }
 
@@ -59,16 +64,12 @@ button {
     /* General button properties */
     border-radius: 7px;
     transform: skew(-15deg);
+    margin-bottom: 50px;
 
     border-color: white;
     background-color: rgb(145, 120, 220);
     color: indigo;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-
-    /* Hide popups */
-    ~ .popup {
-        display: none;
-    }
 
     /* Hovering behaviour */
     &:hover {
@@ -76,43 +77,18 @@ button {
         padding: 5px;
     
         background-image: linear-gradient(rgb(195, 130, 238), rebeccapurple);
-        color: white;
+        color: white;       /* Last button */
 
-        /* Show popup */
-        /* ~ .popup {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        } */
+        a {
+            color: white;   /* First two buttons */
+        }
     }
     
     /* Click behaviour */
-    &:active span {
+    &:active a {
         background-color: aqua;
     }
-
-    /* Change popup after a button click */
-    &:target {
-        background-color: black;
-        /* Show popup */
-        ~ .popup {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-    }
 }
-
-/* Last button specifics */
-button:last-child:hover {
-    /* Test */
-    .pulldown {
-        display: block;
-        flex-direction: column;
-        position: relative;
-    }
-}
-
 
 /* Canada map img */
 .main-img {
@@ -122,19 +98,90 @@ button:last-child:hover {
     flex-direction: column;
 }
 
+/* Canada map disappears */
+.middle:has(:target) {
+    .main-img {
+        display: none;
+    }
+}
+
+/* Hide popups */
+    .popup {
+        display: none;
+    }
+
+/* Show popup when button is clicked */
+.popup:target {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.province {
+    display: flex;
+    margin: 5px;
+    align-items: flex-end;
+    
+    p {
+        display: flex;
+        
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        
+    }
+    
+    /* Hide area */
+    .area {
+        display: none;
+    }
+
+    /* Show area when hovering over flag */
+    &:hover .area{
+        display: block;
+    }
+}
+
+/* "Provinces and Territories" section*/
+.province-img {
+    height: 50px;
+}
+
+/* Show the dropdown under "My Albera" */
+#my-alberta:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    
+    a {
+        padding: 5px;
+        text-align: left;
+        background-color: rgb(145, 120, 220);
+    }
+    color: white;
+    
+    a:hover{
+        /* filter: opacity(25%); */
+        background-color: indigo;
+        color: rgb(145, 120, 220);
+    }
+}
+
 /* Right section formatting */
 .right {
-    /* display: flex; */
-    /* justify-content: flex-end; */
+    display: flex;
+
+    /* height: 50%; */
     flex: 20%;
     padding: 20px;
-    /* width: 25%; */
     text-align: center;
 
     background-color: rgb(145, 120, 220);
     color: white;
 }
 
+/* Bottom section */
 .footer {
     display: flex;
     position: fixed;
@@ -147,7 +194,6 @@ button:last-child:hover {
 
     font-size: small;
     font-weight: bold;
-
     background-color: rgb(145, 120, 220);
     color: indigo;
 }
