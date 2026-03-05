@@ -17,7 +17,7 @@ body {
     flex: 100%;
     margin: 0px;
     border: 0px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     background-color: indigo;
 
@@ -45,12 +45,16 @@ body {
 
 /* Middle section formatting */
 
-@media only screen and (min-width: 600px){
-    .middle {
-        flex: 50%;
-        margin: 10px;
-        /* align-self: center; */
+/* @media only screen and (min-width: 600px) {
+    .left {
+        flex: 25%;
     }
+} */
+
+.middle {
+    flex: 50%;
+    margin: 10px;
+    /* align-self: center; */
 }
 
 /* Hide My Alberta dropdown */
@@ -64,7 +68,7 @@ button {
     /* General button properties */
     border-radius: 7px;
     transform: skew(-15deg);
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 
     border-color: white;
     background-color: rgb(145, 120, 220);
@@ -96,6 +100,7 @@ button {
     justify-content: flex-start;
     align-self: flex-start;
     flex-direction: column;
+    height: 75%;
 }
 
 /* Canada map disappears */
@@ -123,13 +128,11 @@ button {
     margin: 5px;
     align-items: flex-end;
     
+    /* Province names */
     p {
         display: flex;
-        
         margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 0px;
-        
+        margin-right: 10px;        
     }
     
     /* Hide area */
@@ -161,6 +164,7 @@ button {
     }
     color: white;
     
+    /* Make tab darker when hovering */
     a:hover{
         /* filter: opacity(25%); */
         background-color: indigo;
@@ -175,6 +179,7 @@ button {
     /* height: 50%; */
     flex: 20%;
     padding: 20px;
+    height: 300px;
     text-align: center;
 
     background-color: rgb(145, 120, 220);
