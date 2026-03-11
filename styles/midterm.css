@@ -1,0 +1,89 @@
+html {
+    font-family: Arial;
+}
+
+.main {
+    background-color: maroon;
+    color: white;
+    
+    /* Split all columns into quarters */
+    > div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+        
+        > div {
+            padding: 15px;
+        }
+        
+        > a {
+            padding: 15px;
+        }
+    }
+    
+}
+
+#a {
+    grid-column: 1  / span 3;
+    background-color: red;
+}
+
+img {
+    padding: 10px 50px;
+    background-color: lightcoral;
+}
+
+img:hover {
+    transform: skew(0deg);
+    padding: 25px;
+}
+
+.mid-top > div {
+    text-align: center;
+    background-color: lightcoral;
+}
+
+.mid-top > div > a {
+    padding: 10px 50px;
+    font-weight: bold;
+    color: maroon;
+}
+
+.mid-top > div > a:hover {
+    background-color: red;
+    color: white;
+}
+
+#c4 > p {
+    display: none;
+}
+
+#c4:hover {
+    text-align: left;
+    background-color: black !important;
+    color: red !important;
+    > p {
+        display: block;
+        background-color: black !important;
+        color: white !important;
+    }
+}
+
+#d {
+    grid-column: 1  / span 3;
+    background-color: red;
+}
+
+#e {
+    text-align: center;
+    background-color: lightcoral;
+}
+
+#f {
+grid-column: 1  / span 4;
+    text-align: center;
+    padding: 15px;
+    background-color: gray;
+}
