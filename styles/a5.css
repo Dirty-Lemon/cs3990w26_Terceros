@@ -1,3 +1,26 @@
 html {
     font-family: Arial
 }
+
+/* Header formatting */
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px;
+}
+
+/* Program information formatting */
+.programs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    grid-gap: 10px;
+}
+
+/* Course information formatting */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px;
+    grid-gap: 30px;
+}
