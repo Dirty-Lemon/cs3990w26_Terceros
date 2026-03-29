@@ -7,6 +7,27 @@ html {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 150px;
+
+    background-image: url("favicons/compsci.jpg");
+    background-position: center;
+    width: 700px;
+    height: 400px;
+}
+
+/* #img-head {
+    height: 120%;
+} */
+
+a {
+    border-radius: 3px;
+    padding: 5px;
+
+    background-color: rgb(255, 198, 40);
+    color: white;
+}
+
+a:hover {
+    opacity: 50%;
 }
 
 /* Program information formatting */
@@ -15,6 +36,11 @@ html {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 200px;
     grid-gap: 10px;
+}
+
+.program-child {
+    border-width: 10px;
+    border-color: black;
 }
 
 /* Course information formatting */
