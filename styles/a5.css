@@ -28,19 +28,35 @@ a {
 
 a:hover {
     opacity: 50%;
+    transition: 0.5s;
 }
 
 /* Program information formatting */
 .programs {
     display: grid;
+    padding-bottom: 150px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 200px;
     grid-gap: 10px;
 }
 
+/* Make program name transluscent in front of image */
+
 .program-child {
     border-width: 10px;
     border-color: black;
+    padding-bottom: 50px;
+}
+
+.program-name {
+    width: 90%;
+
+    background-color: black;
+    color: white;
+    opacity: 75%;
+}
+.program-img {
+    width: 100%;
 }
 
 /* Course information formatting */
@@ -49,4 +65,14 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 200px;
     grid-gap: 30px;
+}
+
+/* Textbook image properties */
+.textbook {
+    height: 300px;
+}
+
+.textbook:hover {
+    height: 360px;
+    transition: 0.5s;
 }
