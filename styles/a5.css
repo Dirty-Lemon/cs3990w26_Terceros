@@ -8,46 +8,63 @@ html {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 150px;
 
-    background-image: url("favicons/compsci.jpg");
-    background-position: center;
-    width: 700px;
-    height: 400px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 300px;
+    background-image: url(../favicons/compsci.jpg);
+    background-size: cover;
+    opacity: 70%
 }
 
-/* #img-head {
-    height: 120%;
-} */
+.header-title {
+    margin-left: 15px;
+    margin-top: 130px;
+    font-weight: bold;
+    color: lightseagreen;
+    text-shadow: 10px 10px 10px black;
+}
 
+.header-text {
+    margin-top: 60px;
+    color: white;
+    text-shadow: 10px 10px 10px black;
+}
+
+/* "Program info" link properties*/
 a {
     border-radius: 3px;
+    margin: 10px;
     padding: 5px;
 
     background-color: rgb(255, 198, 40);
     color: white;
+
+    /* Transluscent on hover */
+    &:hover {
+        opacity: 50%;
+        transition: 0.5s;
+    }
 }
 
-a:hover {
-    opacity: 50%;
-    transition: 0.5s;
-}
-
-/* Program information formatting */
+/* Programs section formatting */
 .programs {
     display: grid;
-    padding-bottom: 150px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px;
+    padding-bottom: 100px;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
     grid-gap: 10px;
 }
 
-/* Make program name transluscent in front of image */
-
+/* Program properties */
 .program-child {
-    border-width: 10px;
-    border-color: black;
-    padding-bottom: 50px;
+    padding-bottom: 100%;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: lightgray;
 }
 
+/* Program title properties */
 .program-name {
     width: 90%;
 
@@ -55,6 +72,8 @@ a:hover {
     color: white;
     opacity: 75%;
 }
+
+/* Fit image in grid */
 .program-img {
     width: 100%;
 }
@@ -62,17 +81,34 @@ a:hover {
 /* Course information formatting */
 .courses {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
     grid-gap: 30px;
 }
 
 /* Textbook image properties */
 .textbook {
     height: 300px;
+    border-radius: 10px 10px 0px 0px;
+
+    /* Expand on hover */
+    &:hover {
+        transform: scale(120%);
+        transition: 0.5s;
+    }
 }
 
-.textbook:hover {
-    height: 360px;
-    transition: 0.5s;
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    background-color: darkblue;
+    color: white;
+}
+
+#footer-2 {
+    text-align: right;
 }
